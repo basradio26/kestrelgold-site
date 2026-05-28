@@ -1,1 +1,90 @@
+/* Global */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fdf6e3; /* warm parchment */
+  color: #333;
+}
+
+/* Header */
+.header {
+  background: #c1272d; /* Kestrel red */
+  color: #f1c232;      /* gold accent */
+  text-align: center;
+  padding: 25px 10px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 42px;
+  letter-spacing: 1px;
+}
+
+.header p {
+  margin: 5px 0 0;
+  font-size: 18px;
+}
+
+/* Navigation */
+.nav {
+  background: #3a2a1a; /* dark vintage brown */
+  text-align: center;
+  padding: 10px;
+}
+
+.nav a {
+  color: #f1c232;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+.search-box {
+  margin-left: 20px;
+  padding: 5px;
+  border-radius: 4px;
+  border: none;
+}
+
+/* Content Box */
+.content {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #fff8e1; /* soft gold parchment */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.content h2,
+.content h3 {
+  color: #c1272d;
+}
+
+.content ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+/* Footer */
+.footer {
+  background: #3a2a1a;
+  color: #f1c232;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+
+.footer a {
+  color: #f1c232;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
 
