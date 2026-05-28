@@ -1,90 +1,246 @@
-/* Global */
+/* --------------------------------------------------
+   GLOBAL
+-------------------------------------------------- */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #fdf6e3; /* warm parchment */
-  color: #333;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: radial-gradient(circle at top, #fbe7c3 0, #f3d29a 35%, #e3b56a 70%, #c48a3a 100%);
+  color: #2b1a10;
 }
 
-/* Header */
-.header {
-  background: #c1272d; /* Kestrel red */
-  color: #f1c232;      /* gold accent */
-  text-align: center;
-  padding: 25px 10px;
+/* --------------------------------------------------
+   HEADER + NAV
+-------------------------------------------------- */
+.kg-header {
+  background: linear-gradient(to right, #3b2414, #5a3721);
+  color: #f4d58d;
+  padding: 15px 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.35);
 }
 
-.header h1 {
+.kg-header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.kg-brand h1 {
   margin: 0;
-  font-size: 42px;
-  letter-spacing: 1px;
+  font-size: 32px;
+  letter-spacing: 0.12em;
 }
 
-.header p {
-  margin: 5px 0 0;
-  font-size: 18px;
+.kg-brand .tagline {
+  margin: 0;
+  font-size: 13px;
+  opacity: 0.8;
+  letter-spacing: 0.1em;
 }
 
-/* Navigation */
-.nav {
-  background: #3a2a1a; /* dark vintage brown */
-  text-align: center;
-  padding: 10px;
-}
-
-.nav a {
-  color: #f1c232;
-  margin: 0 15px;
+.kg-nav a {
+  color: #f4d58d;
+  margin: 0 12px;
   text-decoration: none;
-  font-weight: bold;
+  font-size: 15px;
+  position: relative;
 }
 
-.nav a:hover {
-  text-decoration: underline;
+.kg-nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #d9a441;
+  transition: width 0.2s ease-out;
 }
 
-.search-box {
-  margin-left: 20px;
-  padding: 5px;
-  border-radius: 4px;
+.kg-nav a:hover::after {
+  width: 100%;
+}
+
+.listen-btn {
+  background: linear-gradient(to bottom, #f4d58d, #d9a441);
   border: none;
+  padding: 7px 16px;
+  border-radius: 999px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #3b2414;
+  margin-left: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
 }
 
-/* Content Box */
-.content {
+/* --------------------------------------------------
+   HERO SECTION
+-------------------------------------------------- */
+.hero {
+  max-width: 1100px;
+  margin: 40px auto;
+  background: linear-gradient(135deg, #5a3721 0, #2b1810 40%, #5a3721 100%);
+  border-radius: 18px;
+  padding: 40px;
+  color: #fdf6e9;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 40px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.45);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 12px;
+  color: #f4d58d;
+  margin-bottom: 10px;
+}
+
+.hero-title {
+  font-size: 42px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  margin: 0 0 5px;
+}
+
+.hero-subtitle {
+  font-size: 16px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #d9a441;
+  margin-bottom: 20px;
+}
+
+.hero-text {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #fbeed6;
+}
+
+.hero-section-title {
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #f4d58d;
+}
+
+.hero-list {
+  padding-left: 18px;
+  margin-bottom: 20px;
+}
+
+.hero-list li {
+  margin-bottom: 8px;
+}
+
+.hero-listen {
+  background: linear-gradient(to bottom, #f4d58d, #d9a441);
+  border: none;
+  padding: 12px 28px;
+  border-radius: 999px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #3b2414;
+  font-size: 15px;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.45);
+}
+
+/* --------------------------------------------------
+   HERO RIGHT SIDE (VINYL + MIC)
+-------------------------------------------------- */
+.hero-right {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Vinyl record */
+.vinyl {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #333 0, #000 55%, #000 100%);
+  border: 10px solid #111;
+  position: absolute;
+  box-shadow: 0 18px 30px rgba(0,0,0,0.7);
+}
+
+.vinyl::before {
+  content: "";
+  position: absolute;
+  inset: 30px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #f4d58d 0, #d9a441 45%, #b37a1f 100%);
+}
+
+.vinyl::after {
+  content: "";
+  position: absolute;
+  inset: 50%;
+  width: 22px;
+  height: 22px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: #fdf6e9;
+  box-shadow: 0 0 0 4px rgba(0,0,0,0.7);
+}
+
+/* Back vinyl (offset) */
+.vinyl-back {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #222 0, #000 60%);
+  border: 10px solid #000;
+  position: absolute;
+  transform: rotate(-18deg) translate(-25px, 25px);
+  opacity: 0.55;
+}
+
+/* Microphone */
+.mic {
+  width: 70px;
+  height: 120px;
+  background: linear-gradient(to bottom, #f5f5f5, #c9c9c9);
+  border-radius: 40px;
+  position: absolute;
+  bottom: -20px;
+  right: -10px;
+  box-shadow: 0 10px 18px rgba(0,0,0,0.6);
+}
+
+/* --------------------------------------------------
+   CONTENT SECTION
+-------------------------------------------------- */
+.content-section {
   max-width: 900px;
   margin: 40px auto;
-  background: #fff8e1; /* soft gold parchment */
+  background: rgba(253, 246, 233, 0.96);
   padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-radius: 16px;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.25);
 }
 
-.content h2,
-.content h3 {
-  color: #c1272d;
-}
-
-.content ul {
-  list-style-type: disc;
-  margin-left: 20px;
-}
-
-/* Footer */
-.footer {
-  background: #3a2a1a;
-  color: #f1c232;
+/* --------------------------------------------------
+   FOOTER
+-------------------------------------------------- */
+.kg-footer {
+  background: #2b1810;
+  color: #f4d58d;
   text-align: center;
   padding: 20px;
-  font-size: 14px;
+  font-size: 13px;
+  letter-spacing: 0.08em;
 }
 
-.footer a {
-  color: #f1c232;
+.kg-footer a {
+  color: #f4d58d;
   text-decoration: none;
 }
-
-.footer a:hover {
-  text-decoration: underline;
-}
-
