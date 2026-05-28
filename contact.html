@@ -10,35 +10,40 @@
 
 <body>
 
-<header class="header">
-  <h1>KESTREL GOLD</h1>
-  <p>The Sound Track to your Life.</p>
+<header class="kg-header">
+  <div class="kg-header-inner">
+    <div class="kg-brand">
+      <h1>KESTREL GOLD</h1>
+      <p class="tagline">The Sound Track to your Life</p>
+    </div>
+
+    <nav class="kg-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Kestrel Gold</a>
+      <a href="#">Listen Live</a>
+      <a href="contact.html">Contact</a>
+      <button class="listen-btn">Listen Live</button>
+    </nav>
+  </div>
 </header>
 
-<nav class="nav">
-  <a href="index.html">Kestrel Gold Home</a>
-  <a href="about.html">About Kestrel Gold</a>
-  <a href="#">Listen Live <em>* coming soon *</em></a>
-  <a href="contact.html">Contact</a>
-  <input type="text" placeholder="Search" class="search-box">
-</nav>
-
-<main class="content">
-
+<section class="content-section">
   <h2>Contact Kestrel Gold</h2>
 
-  <p>We’d love to hear from you. Whether you have a question, a memory to share, or feedback about the station, the Kestrel Gold team is always happy to connect.</p>
+  <p>
+    We’d love to hear from you. Whether you have a question, a memory to share, or feedback about the station,
+    the Kestrel Gold team is always happy to connect.
+  </p>
 
   <h3>Email Us</h3>
   <p>
     You can reach us directly at:<br>
-    <a href="mailto:studio@kestrelgold.co.uk" aria-label="Email Kestrel Gold">studio@kestrelgold.co.uk</a>
+    <a href="mailto:studio@kestrelgold.co.uk">studio@kestrelgold.co.uk</a>
   </p>
 
   <h3>Contact Form</h3>
   <p>Please fill out the form below and a member of our team will get back to you as soon as possible.</p>
 
-  <!-- Placeholder form (static HTML) -->
   <form action="mailto:studio@kestrelgold.co.uk" method="post" enctype="text/plain">
     <label for="name">Your Name:</label><br>
     <input type="text" id="name" name="name" required><br><br>
@@ -49,19 +54,17 @@
     <label for="message">Your Message:</label><br>
     <textarea id="message" name="message" rows="6" required></textarea><br><br>
 
-    <button type="submit">Send Message</button>
+    <button type="submit" class="hero-listen">Send Message</button>
   </form>
 
   <p style="margin-top:20px;">
     Broadcasting proudly alongside 
     <a href="https://basingstokeradio.org.uk" target="_blank">Basingstoke Radio</a>.
   </p>
+</section>
 
-</main>
-
-<footer class="footer">
+<footer class="kg-footer">
   <p>© 2026 Kestrel Gold. All rights reserved.</p>
-  <p>Unauthorised use and/or duplication of this material without written permission is strictly prohibited.</p>
   <p><a href="#">Privacy Policy</a> | <a href="#">Website Terms and Conditions</a></p>
 </footer>
 
